@@ -1,4 +1,10 @@
 Crypsis::Application.routes.draw do
+  resources :rows
+
+
+  resources :data
+
+
   resources :infos
 
 

@@ -1,3 +1,3 @@
 class Info < ActiveRecord::Base
-  attr_accessible :column_id, :string, :value, :value1, :value2, :value3
+  attr_accessible :column_id, :value4, :value1, :value2, :value3
 end
