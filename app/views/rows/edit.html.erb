@@ -2,5 +2,5 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @row %> |
-<%= link_to 'Back', rows_path %>
+<%= link_to 'Show', [@column,@row] %> |
+<%= link_to 'Back', column_rows_path(@column) %>

@@ -1,5 +1,5 @@
 Crypsis::Application.routes.draw do
-  resources :rows
+  
 
 
   resources :data
@@ -8,7 +8,10 @@ Crypsis::Application.routes.draw do
   resources :infos
 
 
-  resources :columns
+  resources :columns do
+    resources :rows
+  end  
+
 
 
   resources :tables

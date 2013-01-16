@@ -1,31 +1,36 @@
-<h1>Listing rows</h1>
+<h1>Values stored for Table in given Rows</h1>
+<% if !@column.rows.empty? %>
 
-<table>
-  <tr>
-    <th>Value1</th>
-    <th>Value2</th>
-    <th>Value3</th>
-    <th>Value4</th>
-    <th>Column</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
+ <table>
+   <tr>
+     <th>Value1</th>
+     <th>Value2</th>
+     <th>Value3</th>
+     <th>Value4</th>
+     <th>Column</th>
+     <th></th>
+     <th></th>
+     <th></th>
+   </tr>
 
-<% @rows.each do |row| %>
-  <tr>
-    <td><%= row.value1 %></td>
-    <td><%= row.value2 %></td>
-    <td><%= row.value3 %></td>
-    <td><%= row.value4 %></td>
-    <td><%= row.column_id %></td>
-    <td><%= link_to 'Show', row %></td>
-    <td><%= link_to 'Edit', edit_row_path(row) %></td>
-    <td><%= link_to 'Destroy', row, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-<% end %>
+ <% @rows.each do |row| %>
+   <tr>
+     <td><%= row.value1 %></td>
+     <td><%= row.value2 %></td>
+     <td><%= row.value3 %></td>
+     <td><%= row.value4 %></td>
+     <td><%= row.column_id %></td>
+     <td><%= link_to 'Show', [@column,row] %></td>
+     <td><%= link_to 'Edit', edit_column_row_path(@column,row) %></td>
+     <td><%= link_to 'Destroy', [@column,row], method: :delete, data: { confirm: 'Are you sure?' } %></td>
+   </tr>
+ <% end %>
+<%else%>
+ <p>Table empty</p>
+<%end%> 
 </table>
 
 <br />
 
-<%= link_to 'New Row', new_row_path %>
+<%= link_to 'Add value', new_column_row_path(@column)%>
+<%= link_to 'Back', @column %>
