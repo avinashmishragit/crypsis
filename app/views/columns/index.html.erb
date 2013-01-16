@@ -1,0 +1,31 @@
+<h1>Listing columns</h1>
+
+<table>
+  <tr>
+    <th>Data1</th>
+    <th>Data2</th>
+    <th>Data3</th>
+    <th>Data4</th>
+    <th>Table</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @columns.each do |column| %>
+  <tr>
+    <td><%= column.data1 %></td>
+    <td><%= column.data2 %></td>
+    <td><%= column.data3 %></td>
+    <td><%= column.data4 %></td>
+    <td><%= column.table_id %></td>
+    <td><%= link_to 'Show', column %></td>
+    <td><%= link_to 'Edit', edit_column_path(column) %></td>
+    <td><%= link_to 'Destroy', column, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Column', new_column_path %>

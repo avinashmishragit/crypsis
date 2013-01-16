@@ -1,0 +1,30 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Data1:</b>
+  <%= @column.data1 %>
+</p>
+
+<p>
+  <b>Data2:</b>
+  <%= @column.data2 %>
+</p>
+
+<p>
+  <b>Data3:</b>
+  <%= @column.data3 %>
+</p>
+
+<p>
+  <b>Data4:</b>
+  <%= @column.data4 %>
+</p>
+
+<p>
+  <b>Table:</b>
+  <%= @column.table_id %>
+</p>
+
+
+<%= link_to 'Edit', edit_column_path(@column) %> |
+<%= link_to 'Back', columns_path %>
