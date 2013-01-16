@@ -24,6 +24,22 @@
   <b>Table:</b>
   <%= @column.table_id %>
 </p>
+<h3>Values In columns</h3>
+<table>
+<tr>
+<th>Data1</th>
+<th>Data2</th>
+<th>Data3</th>
+<th>Data4</th>
+
+</tr>
+<%for t in @column.rows%>
+<tr>
+<td><%=t.value1%></td>
+<td><%=t.value2%></td>
+<td><%= t.value3%></td>
+<td><%= t.value4 %></td>
+<%end%> 
 
 
 <%= link_to 'Edit', edit_column_path(@column) %> |
