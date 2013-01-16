@@ -1,4 +1,7 @@
 Crypsis::Application.routes.draw do
+  resources :infos
+
+
   resources :columns
 
 

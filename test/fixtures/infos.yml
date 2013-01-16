@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  value1: MyString
+  value2: MyString
+  value3: MyString
+  value: 
+  string: MyString
+  column_id: 1
+
+two:
+  value1: MyString
+  value2: MyString
+  value3: MyString
+  value: 
+  string: MyString
+  column_id: 1
