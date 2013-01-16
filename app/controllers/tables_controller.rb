@@ -14,6 +14,8 @@ class TablesController < ApplicationController
   # GET /tables/1.json
   def show
     @table = Table.find(params[:id])
+    @col=Column.find_by_table_id(params[:id])
+    @par=Table.find_all_by_parent_id(params[:id]) 
 
     respond_to do |format|
       format.html # show.html.erb

@@ -28,8 +28,11 @@
     <%= f.text_field :data4 %>
   </div>
   <div class="field">
-    <%= f.label :table_id %><br />
-    <%= f.number_field :table_id %>
+    
+    Select Table
+    <%= f.select :table_id, Table.find(:all).collect {|s|
+[(s.name), s.id]} %>
+
   </div>
   <div class="actions">
     <%= f.submit %>

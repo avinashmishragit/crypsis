@@ -16,5 +16,26 @@
 </p>
 
 
+<p> table have following childtables</p>
+<%if !@par.nil? %>
+ <% @par.each do |a|%>
+  Name: <%= a.name%></br>
+ <%end%>
+<%end%> 
+</br>	
+<% if !@col.nil? %>
+schema name is table is<br/>
+ 
+
+  <%= @col.data1 %> &nbsp
+  <%= @col.data2 %> &nbsp
+  <%= @col.data3 %> &nbsp
+  <%= @col.data4 %> &nbsp
+ 
+<%end%>  
+</br>
 <%= link_to 'Edit', edit_table_path(@table) %> |
 <%= link_to 'Back', tables_path %>
+<%if @col.nil? %>
+ <%= link_to 'Add Schema', new_column_path %>
+<%end%>

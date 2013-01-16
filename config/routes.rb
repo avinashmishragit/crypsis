@@ -1,11 +1,8 @@
 Crypsis::Application.routes.draw do
   
 
-
-  resources :data
-
-
-  resources :infos
+ # match '/terms',   to: 'home#terms'
+  match'/newcol', :to =>'columns#new'
 
 
   resources :columns do
